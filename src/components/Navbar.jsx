@@ -1,6 +1,8 @@
 import React from 'react'
 import { IoCart } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
+import { CiMenuKebab } from "react-icons/ci";
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
   return (
@@ -12,12 +14,15 @@ const Navbar = () => {
       </div>
       <div className='flex items-center gap-4 justify-self-end'>
         <ul className=' gap-5 items-center pr-3 hidden lg:flex'>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
+          <NavLink to={'/'} className='hover:font-semibold'>Home</NavLink>
+          <NavLink to={'/shop'} className='hover:font-semibold'>Shop</NavLink>
+          <NavLink to={'/about'} className='hover:font-semibold'>About</NavLink>
         </ul>
         <IoCart className='w-10 h-10 bg-blue-100 p-2.5 rounded-full' />
         <button className='bg-blue-100 px-3 py-1 rounded-3xl text-sm md:text-md font-semibold'>Login</button>
+        <button className='lg:hidden'>
+          <CiMenuKebab className='h-6 w-6' />
+        </button>
       </div>
     </div>
   )
