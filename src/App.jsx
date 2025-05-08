@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Shop from './components/Shop'
 import About from './components/About'
 import NotFound from './components/NotFound'
+import CartPage from './components/CartPage'
 
 const App = () => {
 
@@ -19,6 +20,10 @@ const App = () => {
     {
       path: '/about',
       element: <About />
+    },
+    {
+        path: '/cart',
+        element: <CartPage />
     },
     {
       path: '*',
