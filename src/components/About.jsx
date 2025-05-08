@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div>
         <Navbar />
-        <div className={`${mode ? 'bg-[#0a1223]' : "bg-white"} w-full h-[90vh] flex justify-center items-center`}>
+        <div className={`${mode ? 'bg-[#101010]' : "bg-white"} w-full h-[90vh] flex justify-center items-center`}>
             <h1 className={`text-3xl font-semibold ${mode ? "text-white" : 'text-black'}`}>About Section</h1>
         </div>
     </div>
