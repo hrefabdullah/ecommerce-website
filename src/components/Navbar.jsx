@@ -97,10 +97,10 @@ const Navbar = () => {
 
       <div className={`sm:hidden ${searchBar ? 'flex' : 'hidden'} w-screen bg-amber-400 absolute left-0 top-[10vh] p-2  justify-around items-center`}>
 
-        <input className='bg-zinc-100 rounded-4xl w-[80vw] p-3 px-5 text-sm' placeholder='Search for products' type="text" name="search" id="itemSerach" />
+        <input className={`${mode ?  'border-2 border-[#141414]' : 'bg-zinc-100'} rounded-4xl w-[80vw] p-3 px-5 text-sm`} placeholder='Search for products' type="text" name="search" id="itemSerach" />
 
         <button >
-          <CiSearch className='w-10 h-10 bg-zinc-100 rounded-full p-2.5' />
+          <CiSearch className={` ${mode ? 'border-2 border-[#141414] w-11 h-11' : 'bg-zinc-100'} w-10 h-10 rounded-full p-2.5`} />
         </button>
 
       </div>
