@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { useSelector } from 'react-redux'
+import Footer from './Footer'
 
 const Home = () => {
 
@@ -9,9 +10,10 @@ const Home = () => {
   return (
     <div>
         <Navbar />
-        <div className={`${mode ? 'bg-[#101010]' : "bg-white"} w-full h-[90vh] flex justify-center items-center`}>
-            <h1 className={`text-3xl font-semibold ${mode ? "text-white" : 'text-black'}`}>Home Section</h1>
+        <div className={`${mode ? 'bg-zinc-900' : "bg-white"} w-full h-[100vh] flex justify-center items-center`}>
+            <h1 className={`text-3xl font-semibold ${mode ? "text-white" : 'text-zinc-900'}`}>Home Section</h1>
         </div>
+        <Footer />
     </div>
   )
 }

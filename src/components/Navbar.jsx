@@ -21,7 +21,7 @@ const Navbar = () => {
   const searchBar = useSelector((state) => state.searchBar.value)
 
   return (
-    <div className={`z-10 w-[100%] min-w-[350px] h-[10vh] min-h-[70px] ${mode ? 'bg-[#101010]' : 'bg-white'} grid grid-cols-2 px-7 py-1`}>
+    <div className={`z-10 w-full min-w-[350px] h-[10vh] min-h-[70px] ${mode ? 'bg-zinc-900' : 'bg-white'} grid grid-cols-2 px-7 py-1`}>
 
       <h1 className='text-amber-500 text-[2rem] font-bold self-center'>HS</h1>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
           {menu ? <RxCross1 className='text-amber-400 h-6 w-6' /> : <CiMenuKebab className='text-amber-400 h-6 w-6' />}
         </button>
 
-        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-[#101010] text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
+        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-zinc-800 text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
 
           <ul className='p-5 gap-2 flex flex-col md:text-lg font-normal text-left text-md '>
 
