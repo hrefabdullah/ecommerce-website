@@ -19,18 +19,18 @@ const Navbar = () => {
   const mode = useSelector((state) => state.darkMode.value)
 
   return (
-    <div className='z-10 w-[100%] min-w-[350px] h-[10vh] min-h-[70px] bg-yellow-400 grid grid-cols-2 px-7 py-1'>
+    <div className={`z-10 w-[100%] min-w-[350px] h-[10vh] min-h-[70px] ${mode ? 'bg-[#101010]' : 'bg-white'} grid grid-cols-2 px-7 py-1`}>
 
-      <h1 className='text-[2rem] font-bold self-center'>HS</h1>
+      <h1 className='text-amber-500 text-[2rem] font-bold self-center'>HS</h1>
 
       <div className='flex items-center gap-4 justify-self-end'>
 
         <div className='flex items-center gap-1 justify-self-center '>
 
-          <input className='bg-white rounded-3xl w-[20vw] p-3 text-sm hidden sm:inline' placeholder='Search for products' type="text" name="search" id="itemSerach" />
+          <input className='bg-zinc-100 rounded-3xl w-[20vw] p-3 px-5 text-sm hidden sm:inline' placeholder='Search for products' type="text" name="search" id="itemSerach" />
 
           <button onclick>
-            <CiSearch className='w-10 h-10 bg-blue-100 rounded-full p-2.5' />
+            <CiSearch className='w-10 h-10 bg-zinc-100 rounded-full p-2.5' />
           </button>
 
         </div>
@@ -43,33 +43,33 @@ const Navbar = () => {
           <button onClick={() => dispatch(day())}><IoMoon /></button>
         </ul>
         <NavLink className='hidden' to={'/cart'} >
-          <IoCart className='w-10 h-10 bg-blue-100 p-2.5 rounded-full' />
+          <IoCart className='w-10 h-10 bg-zinc-100 p-2.5 rounded-full' />
         </NavLink >
-        <button className='bg-blue-100 px-3 py-1 rounded-3xl text-sm md:text-md font-semibold'>Login</button>
+        <button className='bg-amber-400 px-3 py-1 rounded-3xl text-sm text-white md:text-md font-semibold'>Login</button>
         <button onClick={() => dispatch(menuOn())} className='lg:hidden'>
-          <CiMenuKebab className='h-6 w-6' />
+          <CiMenuKebab className='text-amber-400 h-6 w-6' />
         </button>
-        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden bg-yellow-400 w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
+        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-[#101010] text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
           <ul className='p-5 gap-2 flex flex-col md:text-xl font-normal text-left text-md '>
             <NavLink to={'/'} className='hover:font-semibold flex items-center gap-2'>
-              <MdHomeFilled />
+              <MdHomeFilled className='text-amber-400' />
               <h1>Home</h1>
             </NavLink>
             <NavLink to={'/shop'} className='hover:font-semibold flex items-center gap-2'>
-              <FaBagShopping className='h-4' />
+              <FaBagShopping className='h-5 text-amber-400' />
               <h1>Store</h1>
             </NavLink>
             <NavLink to={'/about'} className='hover:font-semibold flex items-center gap-2'>
-              <AiFillInfoCircle />
+              <AiFillInfoCircle className='text-amber-400' />
               <h1>About us</h1>
             </NavLink>
-            <NavLink className='flex items-center gap-2' to={'/cart'} >
-              <IoCart />
+            <NavLink className='flex items-center gap-2 hover:font-semibold' to={'/cart'} >
+              <IoCart className='text-amber-400' />
               <h1>Your cart</h1>
             </NavLink >
-            <button className='flex items-center gap-2' onClick={() => dispatch(day())}>
-              {mode ? <MdSunny /> : <IoMoon />}
-              <h1><span>{mode ? 'Light' : 'Dark'}</span> mode</h1>
+            <button className='flex items-center gap-2 ' onClick={() => dispatch(day())}>
+              {mode ? <MdSunny className='text-amber-400' /> : <IoMoon className='text-amber-400' />}
+              <h1 className='hover:font-semibold'><span>{mode ? 'Light' : 'Dark'}</span> mode</h1>
             </button>
           </ul>
         </div>
