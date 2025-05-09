@@ -10,7 +10,7 @@ const CartPage = () => {
     <div>
         <Navbar />
         <div className={`${mode ? 'bg-[#101010]' : 'bg-white'} w-screen h-[90vh] flex justify-center items-center`}>
-            <h1 className={` ${mode ? 'bg-[#101010]' : 'bg-white'} text-3xl font-semibold`}>Your Cart</h1>
+            <h1 className={` ${mode ? 'text-white' : 'text-[#101010]'} text-3xl font-semibold`}>Your Cart</h1>
         </div>
     </div>
   )
