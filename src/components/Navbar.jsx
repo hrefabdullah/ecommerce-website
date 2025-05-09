@@ -43,10 +43,12 @@ const Navbar = () => {
 
         <ul className=' gap-5 items-center pr-3 hidden lg:flex'>
 
-          <NavLink to={'/'} className='hover:font-semibold'>Home</NavLink>
-          <NavLink to={'/shop'} className='hover:font-semibold'>Shop</NavLink>
-          <NavLink to={'/about'} className='hover:font-semibold'>About</NavLink>
-          <button onClick={() => dispatch(day())}><IoMoon /></button>
+          <NavLink to={'/'} className={`${mode ? 'text-white' : 'text-black'} hover:font-semibold`}>Home</NavLink>
+          <NavLink to={'/shop'} className={`${mode ? 'text-white' : 'text-black'} hover:font-semibold`}>Shop</NavLink>
+          <NavLink to={'/about'} className={`${mode ? 'text-white' : 'text-black'} hover:font-semibold`}>About</NavLink>
+          <button onClick={() => dispatch(day())}>
+            {mode ? <MdSunny className='text-white' /> : <IoMoon className='text-black' /> }
+          </button>
 
         </ul>
 
@@ -57,34 +59,37 @@ const Navbar = () => {
         <button className='bg-amber-400 px-3 py-1 rounded-3xl text-sm text-white md:text-md font-semibold'>Login</button>
 
         <button onClick={() => dispatch(menuOn())} className='lg:hidden'>
-          <CiMenuKebab className='text-amber-400 h-6 w-6' />
+          {menu ? <RxCross1 className='text-amber-400 h-6 w-6' /> : <CiMenuKebab className='text-amber-400 h-6 w-6' />}
         </button>
 
         <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-[#101010] text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
 
-          <ul className='p-5 gap-2 flex flex-col md:text-xl font-normal text-left text-md '>
+          <ul className='p-5 gap-2 flex flex-col md:text-lg font-normal text-left text-md '>
 
-            <NavLink to={'/'} className='hover:font-semibold flex items-center gap-2'>
+            <NavLink onClick={() => dispatch(menuOn())} to={'/'} className='hover:font-semibold flex items-center gap-2'>
               <MdHomeFilled className='text-amber-400' />
               <h1>Home</h1>
             </NavLink>
 
-            <NavLink to={'/shop'} className='hover:font-semibold flex items-center gap-2'>
-              <FaBagShopping className='h-5 text-amber-400' />
+            <NavLink onClick={() => dispatch(menuOn())} to={'/shop'} className='hover:font-semibold flex items-center gap-2'>
+              <FaBagShopping className='h-4 text-amber-400' />
               <h1>Store</h1>
             </NavLink>
 
-            <NavLink to={'/about'} className='hover:font-semibold flex items-center gap-2'>
+            <NavLink onClick={() => dispatch(menuOn())} to={'/about'} className='hover:font-semibold flex items-center gap-2'>
               <AiFillInfoCircle className='text-amber-400' />
               <h1>About us</h1>
             </NavLink>
 
-            <NavLink className='flex items-center gap-2 hover:font-semibold' to={'/cart'} >
+            <NavLink onClick={() => dispatch(menuOn())} className='flex items-center gap-2 hover:font-semibold' to={'/cart'} >
               <IoCart className='text-amber-400' />
               <h1>Your cart</h1>
             </NavLink >
 
-            <button className='flex items-center gap-2 ' onClick={() => dispatch(day())}>
+            <button className='flex items-center gap-2 ' onClick={() => {
+              dispatch(day()),
+              dispatch(menuOn())
+            }}>
               {mode ? <MdSunny className='text-amber-400' /> : <IoMoon className='text-amber-400' />}
               <h1 className='hover:font-semibold'><span>{mode ? 'Light' : 'Dark'}</span> mode</h1>
             </button>
