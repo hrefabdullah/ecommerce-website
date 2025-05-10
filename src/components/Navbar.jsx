@@ -62,7 +62,7 @@ const Navbar = () => {
           {menu ? <RxCross1 className='text-amber-400 h-6 w-6' /> : <CiMenuKebab className='text-amber-400 h-6 w-6' />}
         </button>
 
-        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-zinc-800 text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[90vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
+        <div className={`${menu ? 'absolute' : 'hidden'} lg:hidden ${mode ? 'bg-zinc-800 text-white' : 'bg-white'} w-[50vw] md:w-[30vw] h-[100vh] min-h-[80vh] z-1 top-[10vh] right-0`}>
 
           <ul className='p-5 gap-2 flex flex-col md:text-lg font-normal text-left text-md '>
 
