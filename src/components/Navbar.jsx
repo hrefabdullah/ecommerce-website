@@ -21,7 +21,7 @@ const Navbar = () => {
   const searchBar = useSelector((state) => state.searchBar.value)
 
   return (
-    <div className={`z-10 w-full min-w-[350px] h-[10vh] min-h-[70px] ${mode ? 'bg-zinc-900' : 'bg-white'} grid grid-cols-2 px-7 py-1`}>
+    <div className={`z-10 w-screen min-w-[350px] h-[10vh] min-h-[70px] ${mode ? 'bg-zinc-900' : 'bg-white'} grid grid-cols-2 px-7 py-1`}>
 
       <h1 className='text-amber-500 text-[2rem] font-bold self-center'>HS</h1>
 
