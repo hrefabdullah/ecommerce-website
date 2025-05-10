@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import { useSelector } from 'react-redux'
 
 const Shop = () => {
@@ -9,9 +10,10 @@ const Shop = () => {
   return (
     <div>
         <Navbar />
-        <div className={`${mode ? 'bg-[#101010]' : "bg-white"} w-full h-[90vh] flex justify-center items-center`}>
+        <div className={`${mode ? 'bg-zinc-900' : "bg-white"} w-full h-[90vh] flex justify-center items-center`}>
             <h1 className={`text-3xl font-semibold ${mode ? "text-white" : 'text-black'}`}>Store Section</h1>
         </div>
+        <Footer />
     </div>
   )
 }
