@@ -5,6 +5,7 @@ import Shop from './components/Shop'
 import About from './components/About'
 import NotFound from './components/NotFound'
 import CartPage from './components/CartPage'
+import LoginPage from './components/LoginPage'
 
 const App = () => {
 
@@ -24,6 +25,10 @@ const App = () => {
     {
         path: '/cart',
         element: <CartPage />
+    },
+    {
+      path: '/login',
+      element: <LoginPage />
     },
     {
       path: '*',

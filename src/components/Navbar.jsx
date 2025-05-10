@@ -56,7 +56,7 @@ const Navbar = () => {
           <IoCart className={`w-10 h-10 bg-amber-400 p-2.5 rounded-full ${mode ? 'text-white' : 'text-black' }`}/>
         </NavLink >
 
-        <button className={` bg-amber-400 px-3 py-1 rounded-3xl text-sm ${mode ? 'text-white' : 'text-black' } md:text-md font-semibold `}>Login</button>
+        <NavLink to={'/login'} className={` bg-amber-400 px-3 py-1 rounded-3xl text-sm ${mode ? 'text-white' : 'text-black' } md:text-md font-semibold `}>Login</NavLink>
 
         <button onClick={() => dispatch(menuOn())} className='lg:hidden'>
           {menu ? <RxCross1 className='text-amber-400 h-6 w-6' /> : <CiMenuKebab className='text-amber-400 h-6 w-6' />}
