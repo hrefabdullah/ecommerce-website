@@ -31,7 +31,6 @@ const Footer = () => {
                         <NavLink>Return Policy</NavLink>
                         <NavLink>Feedback</NavLink>
                         <NavLink>Customer Care</NavLink>
-                        <NavLink>TC</NavLink>
                     </ul>
                 </div>
                 <div className='col-span-2 ml-3 px-3'>
