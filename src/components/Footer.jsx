@@ -10,7 +10,7 @@ const Footer = () => {
     const mode = useSelector((state) => state.darkMode.value)
 
     return (
-        <div className={` ${mode ? 'bg-zinc-900 text-zinc-300' : 'bg-white text-zinc-700'} h-[25vh] w-screen text-[#515151]  grid grid-cols-6 grid-rows-2 text-[12px] pb-8 p-4 md:text-[15px] lg:text-[16px] border-t-1 pt-8`}>
+        <div className={` ${mode ? 'bg-zinc-900 text-zinc-300' : 'bg-white text-zinc-700'} h-[25vh] w-screen text-[#515151]  grid grid-cols-6 grid-rows-2 text-[12px] pb-8 p-4 md:text-[15px] lg:text-[16px] border-t-[1px] border-zinc-700 pt-8`}>
             <div className='px-3 md:px-5 lg:px-6 col-span-2'>
                 <h1 className='text-5xl md:text-6xl font-bold text-amber-400'>HS</h1>
                 <p className='font-semibold text-md lg:text-xl'>Illuminating your Ideas</p>
