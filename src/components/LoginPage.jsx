@@ -11,7 +11,7 @@ const LoginPage = () => {
   return (
     <div>
       <Navbar />
-      <div className={` ${mode ? 'bg-zinc-900 text-white' : 'bg-white text-black' } w-screen h-[90vh] flex justify-center items-center `}>
+      <div className={` ${mode ? 'bg-zinc-900 text-white' : 'bg-white text-black' } w-screen h-[70vh] flex justify-center items-center mb-10`}>
         <div className='h-[50vh] md:h-[70vh] w-[80vw] md:w-[60vw] border-2 border-amber-400 rounded-4xl grid grid-rows-4'>
           <div className='place-items-center self-center row-span-1'>
             <h1 className='font-bold text-4xl text-amber-400'>Login</h1>
