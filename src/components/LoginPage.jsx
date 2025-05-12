@@ -21,7 +21,7 @@ const LoginPage = () => {
             <input type="text" id='username' className='bg-zinc-200 rounded-lg p-2 mb-3 text-lg w-[100%]' />
             <label htmlFor="pwd">Password</label>
             <input type="password" id='pwd' className='bg-zinc-200 rounded-lg p-2 text-lg w-[100%]' />
-            <button className='bg-amber-400 mt-5 w-[15vw] h-max px-2 py-1 place-self-center-safe rounded-sm text-center text-black font-semibold'>Continue</button>
+            <button className='bg-amber-400 mt-5 w-max h-max px-2 py-1 place-self-center-safe rounded-sm text-center text-black font-semibold'>Continue</button>
           </form>
           <div className='w-full flex justify-center h-full'>
             
