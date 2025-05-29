@@ -8,7 +8,7 @@ import CartPage from './components/CartPage'
 import LoginPage from './components/LoginPage'
 
 const App = () => {
-
+  
   const router = createBrowserRouter([
     {
       path: '/',
