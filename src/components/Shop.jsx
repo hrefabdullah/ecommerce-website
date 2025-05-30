@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
+import ProductPage from './ProductPage'
 
 const Shop = () => {
 
@@ -26,9 +27,10 @@ const Shop = () => {
   return (
     <div>
       <Navbar />
-      <div className={`${mode ? 'bg-zinc-900' : "bg-white"} w-full p-5 mb-5 mt-[10vh]`}>
+      <div className={`${mode ? 'bg-zinc-900' : "bg-white"} w-full mb-5 mt-[10vh]`}>
         {/* <h1 className={`text-3xl font-semibold ${mode ? "text-white" : 'text-black'}`}>Store Section</h1> */}
-        <h1 className='text-3xl font-semibold mb-5'>Featured Products</h1>
+        {/* <h1 className='text-3xl font-semibold mb-5'>Featured Products</h1> */}
+        <ProductPage />
         <div className='flex flex-wrap gap-2 overflow-x-auto whitespace-nowrap py-5 h-max'>
           {products.map((item) => (
             <div className='w-[200px] h-[30vh] border-2 rounded-[27px] border-amber-400 flex flex-col items-center justify-center' key={item._id}>
